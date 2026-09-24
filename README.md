@@ -1,0 +1,1 @@
+# 2026-2-periodo-Ciencia_dos_Dados-Big_Data
