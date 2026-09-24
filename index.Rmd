@@ -1,0 +1,101 @@
+---
+title: "Ciência de dados e Big Data"
+author: "Professor Pedro Luiz Pzzigatti Correa"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+url: your book url like https://bookdown.org/yihui/bookdown
+#cover-image: images/cover.jpg
+description: |
+  Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da  disciplina 
+link-citations: yes
+github-repo: miguel7penteado/2025-2sem-GTI-BancoDeDados
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plantuml)
+
+
+# Detectar o sistema operacional
+so <- Sys.info()[["sysname"]]
+
+if (so == "Linux")
+{
+  plantumlOptions(jar_path = "/usr/share/java/plantuml.jar")  
+}else 
+  if (so == "Windows") 
+  {
+    plantumlOptions(jar_path = "C:/PROGRA~1/COMMON~1/Oracle/Java/libs/plantuml-1.2025.4.jar")
+  }else
+  {
+    print(paste("Sistema não reconhecido:", so))
+  }
+
+
+knitr::knit_engines$set(plantuml = function(options)
+{
+    code <- paste(options$code, collapse = "\n")
+  
+  if (is.null(options$plantuml.path)) 
+  {
+    path <-  "."
+  } else
+    {
+      path <- options$plantuml.path
+    }
+  
+  dir.create(path, showWarnings = FALSE, recursive = TRUE)
+  fig <- paste0(options$label, ".", "svg")
+  fig <- file.path(path, fig)
+  if (options$eval) plot(x = plantuml(code), vector=FALSE, file=fig)
+  knitr::engine_output(options, out = list(knitr::include_graphics(fig)))
+})
+```
+
+# Sobre estas anotações {.unnumbered}
+
+—————————————————————————————————————————————
+
+Estas anotações são apenas lembretes das aulas expostas em sala, durante a disciplina de Data Science e Big Data.
+
+
+
+
+## Calendário das aulas {.unnumbered}
+
+—————————————————————————————————————————————
+
+##### SETEMBRO DE 2026 {.unnumbered}
+
+| Data       | Dia da Semana | Aulas  | Conteúdo                                                                                       |
+| ---------- | ------------- | ------ | ---------------------------------------------------------------------------------------------- |
+| 24/09/2026 | Quinta-Feira  | Aula 1 | Apresentação da Disciplina. Introdução a Modelos de Gestão de Dados. **Lista de Exercícios 1** |
+
+##### OUTUBRO DE 2026 {.unnumbered}
+
+| Data       | Dia da Semana | Aulas  | Conteúdo                                                                                                            |
+| ---------- | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
+| 01/10/2026 | Quinta-Feira  | Aula 2 | Definição dos Grupos e Temas dos Projetos. **Atividade somente dos grupos – definição dos temas**                   |
+| 08/10/2026 | Quinta-Feira  | Aula 3 | Análise Exploratória dos Dados. **Lista de Exercícios 2**                                                           |
+| 15/10/2026 | Quinta-Feira  | Aula 4 | Preparação dos Dados, Seleção e definição de amostras. Análise de Desempenho dos Modelos. **Lista de Exercícios 3** |
+| 22/10/2026 | Quinta-Feira  | Aula 5 | Análise e Visualização dos Dados. **Lista de Exercícios 4**                                                         |
+| 29/10/2026 | Quinta-Feira  | Aula 6 | Desenvolvimento do Projeto da Disciplina                                                                            |
+
+##### NOVEMBRO DE 2026 {.unnumbered}
+
+| Data       | Dia da Semana | Aulas   | Conteúdo                          |
+| ---------- | ------------- | ------- | --------------------------------- |
+| 05/11/2026 | Quinta-Feira  | Aula 7  | Seminário – Projeto da Disciplina |
+| 12/11/2026 | Quinta-Feira  | Aula 8  | Seminário – Projeto da Disciplina |
+| 19/11/2026 | Quinta-Feira  | Aula 9  | Seminário – Projeto da Disciplina |
+| 26/11/2026 | Quinta-Feira  | Aula 10 | Seminário – Projeto da Disciplina |
+
+##### DEZEMBRO DE 2026 {.unnumbered}
+
+| Data       | Dia da Semana | Aulas   | Conteúdo                              |
+| ---------- | ------------- | ------- | ------------------------------------- |
+| 03/12/2026 | Quinta-Feira  | Aula 11 | **Data Final de entrega dos Artigos** |
+
+

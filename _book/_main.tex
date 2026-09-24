@@ -1,0 +1,219 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{book}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Ciência de dados e Big Data},
+  pdfauthor={Professor Pedro Luiz Pzzigatti Correa},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Ciência de dados e Big Data}
+\author{Professor Pedro Luiz Pzzigatti Correa}
+\date{2026-09-24}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Sobre estas anotações}\label{sobre-estas-anotauxe7uxf5es}
+\addcontentsline{toc}{chapter}{Sobre estas anotações}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Estas anotações são apenas lembretes das aulas expostas em sala, durante a disciplina de Data Science e Big Data.
+
+\section*{Calendário das aulas}\label{calenduxe1rio-das-aulas}
+\addcontentsline{toc}{section}{Calendário das aulas}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph*{SETEMBRO DE 2026}\label{setembro-de-2026}
+\addcontentsline{toc}{paragraph}{SETEMBRO DE 2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0813}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1057}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0488}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.7642}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+24/09/2026 & Quinta-Feira & Aula 1 & Apresentação da Disciplina. Introdução a Modelos de Gestão de Dados. \textbf{Lista de Exercícios 1} \\
+\end{longtable}
+
+\paragraph*{OUTUBRO DE 2026}\label{outubro-de-2026}
+\addcontentsline{toc}{paragraph}{OUTUBRO DE 2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0694}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0903}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0417}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.7986}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+01/10/2026 & Quinta-Feira & Aula 2 & Definição dos Grupos e Temas dos Projetos. \textbf{Atividade somente dos grupos -- definição dos temas} \\
+08/10/2026 & Quinta-Feira & Aula 3 & Análise Exploratória dos Dados. \textbf{Lista de Exercícios 2} \\
+15/10/2026 & Quinta-Feira & Aula 4 & Preparação dos Dados, Seleção e definição de amostras. Análise de Desempenho dos Modelos. \textbf{Lista de Exercícios 3} \\
+22/10/2026 & Quinta-Feira & Aula 5 & Análise e Visualização dos Dados. \textbf{Lista de Exercícios 4} \\
+29/10/2026 & Quinta-Feira & Aula 6 & Desenvolvimento do Projeto da Disciplina \\
+\end{longtable}
+
+\paragraph*{NOVEMBRO DE 2026}\label{novembro-de-2026}
+\addcontentsline{toc}{paragraph}{NOVEMBRO DE 2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1587}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2063}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5238}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+05/11/2026 & Quinta-Feira & Aula 7 & Seminário -- Projeto da Disciplina \\
+12/11/2026 & Quinta-Feira & Aula 8 & Seminário -- Projeto da Disciplina \\
+19/11/2026 & Quinta-Feira & Aula 9 & Seminário -- Projeto da Disciplina \\
+26/11/2026 & Quinta-Feira & Aula 10 & Seminário -- Projeto da Disciplina \\
+\end{longtable}
+
+\paragraph*{DEZEMBRO DE 2026}\label{dezembro-de-2026}
+\addcontentsline{toc}{paragraph}{DEZEMBRO DE 2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1493}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1940}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1045}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5522}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+03/12/2026 & Quinta-Feira & Aula 11 & \textbf{Data Final de entrega dos Artigos} \\
+\end{longtable}
+
+\chapter{- Introdução a Modelos de Gestão de Dados}\label{introduuxe7uxe3o-a-modelos-de-gestuxe3o-de-dados}
+
+\chapter{- Definição de Grupos e Temas de Projetos}\label{definiuxe7uxe3o-de-grupos-e-temas-de-projetos}
+
+\chapter{- Análise Exploratória de dados}\label{anuxe1lise-exploratuxf3ria-de-dados}
+
+\chapter{- Preparação de Dados, Seleção e Definição de Amostras, Análsie de Desempenho de Modelos}\label{preparauxe7uxe3o-de-dados-seleuxe7uxe3o-e-definiuxe7uxe3o-de-amostras-anuxe1lsie-de-desempenho-de-modelos}
+
+\bibliography{book.bib}
+
+\end{document}

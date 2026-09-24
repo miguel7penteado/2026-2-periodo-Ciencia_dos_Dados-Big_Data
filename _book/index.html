@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ciência de dados e Big Data</title>
+  <meta name="description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Ciência de dados e Big Data" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina" />
+  <meta name="github-repo" content="miguel7penteado/2025-2sem-GTI-BancoDeDados" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ciência de dados e Big Data" />
+  
+  <meta name="twitter:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina" />
+  
+
+<meta name="author" content="Professor Pedro Luiz Pzzigatti Correa" />
+
+
+<meta name="date" content="2026-09-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="introdução-a-modelos-de-gestão-de-dados.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Sobre estas anotações</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#calend%C3%A1rio-das-aulas"><i class="fa fa-check"></i>Calendário das aulas</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introdução-a-modelos-de-gestão-de-dados.html"><a href="introdução-a-modelos-de-gestão-de-dados.html"><i class="fa fa-check"></i><b>1</b> - Introdução a Modelos de Gestão de Dados</a></li>
+<li class="chapter" data-level="2" data-path="definição-de-grupos-e-temas-de-projetos.html"><a href="definição-de-grupos-e-temas-de-projetos.html"><i class="fa fa-check"></i><b>2</b> - Definição de Grupos e Temas de Projetos</a></li>
+<li class="chapter" data-level="3" data-path="análise-exploratória-de-dados.html"><a href="análise-exploratória-de-dados.html"><i class="fa fa-check"></i><b>3</b> - Análise Exploratória de dados</a></li>
+<li class="chapter" data-level="4" data-path="preparação-de-dados-seleção-e-definição-de-amostras-análsie-de-desempenho-de-modelos.html"><a href="preparação-de-dados-seleção-e-definição-de-amostras-análsie-de-desempenho-de-modelos.html"><i class="fa fa-check"></i><b>4</b> - Preparação de Dados, Seleção e Definição de Amostras, Análsie de Desempenho de Modelos</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ciência de dados e Big Data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Ciência de dados e Big Data</h1>
+<p class="author"><em>Professor Pedro Luiz Pzzigatti Correa</em></p>
+<p class="date"><em>2026-09-24</em></p>
+</div>
+<div id="sobre-estas-anotações" class="section level1 unnumbered hasAnchor">
+<h1>Sobre estas anotações<a href="index.html#sobre-estas-anota%C3%A7%C3%B5es" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>—————————————————————————————————————————————</p>
+<p>Estas anotações são apenas lembretes das aulas expostas em sala, durante a disciplina de Data Science e Big Data.</p>
+<div id="calendário-das-aulas" class="section level2 unnumbered hasAnchor">
+<h2>Calendário das aulas<a href="index.html#calend%C3%A1rio-das-aulas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<div id="setembro-de-2026" class="section level5 unnumbered hasAnchor">
+<h5>SETEMBRO DE 2026<a href="index.html#setembro-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<colgroup>
+<col width="8%" />
+<col width="10%" />
+<col width="4%" />
+<col width="76%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>24/09/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 1</td>
+<td>Apresentação da Disciplina. Introdução a Modelos de Gestão de Dados. <strong>Lista de Exercícios 1</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outubro-de-2026" class="section level5 unnumbered hasAnchor">
+<h5>OUTUBRO DE 2026<a href="index.html#outubro-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="9%" />
+<col width="4%" />
+<col width="79%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01/10/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 2</td>
+<td>Definição dos Grupos e Temas dos Projetos. <strong>Atividade somente dos grupos – definição dos temas</strong></td>
+</tr>
+<tr class="even">
+<td>08/10/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 3</td>
+<td>Análise Exploratória dos Dados. <strong>Lista de Exercícios 2</strong></td>
+</tr>
+<tr class="odd">
+<td>15/10/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 4</td>
+<td>Preparação dos Dados, Seleção e definição de amostras. Análise de Desempenho dos Modelos. <strong>Lista de Exercícios 3</strong></td>
+</tr>
+<tr class="even">
+<td>22/10/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 5</td>
+<td>Análise e Visualização dos Dados. <strong>Lista de Exercícios 4</strong></td>
+</tr>
+<tr class="odd">
+<td>29/10/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 6</td>
+<td>Desenvolvimento do Projeto da Disciplina</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="novembro-de-2026" class="section level5 unnumbered hasAnchor">
+<h5>NOVEMBRO DE 2026<a href="index.html#novembro-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="20%" />
+<col width="11%" />
+<col width="52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>05/11/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 7</td>
+<td>Seminário – Projeto da Disciplina</td>
+</tr>
+<tr class="even">
+<td>12/11/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 8</td>
+<td>Seminário – Projeto da Disciplina</td>
+</tr>
+<tr class="odd">
+<td>19/11/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 9</td>
+<td>Seminário – Projeto da Disciplina</td>
+</tr>
+<tr class="even">
+<td>26/11/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 10</td>
+<td>Seminário – Projeto da Disciplina</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dezembro-de-2026" class="section level5 unnumbered hasAnchor">
+<h5>DEZEMBRO DE 2026<a href="index.html#dezembro-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<table>
+<colgroup>
+<col width="14%" />
+<col width="19%" />
+<col width="10%" />
+<col width="55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>03/12/2026</td>
+<td>Quinta-Feira</td>
+<td>Aula 11</td>
+<td><strong>Data Final de entrega dos Artigos</strong></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introdução-a-modelos-de-gestão-de-dados.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

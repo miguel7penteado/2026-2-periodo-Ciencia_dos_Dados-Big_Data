@@ -1,0 +1,4 @@
+introdução-a-modelos-de-gestão-de-dados
+definição-de-grupos-e-temas-de-projetos
+análise-exploratória-de-dados
+preparação-de-dados-seleção-e-definição-de-amostras-análsie-de-desempenho-de-modelos
